@@ -1,0 +1,6 @@
+package com.kpsoft.socialmedia
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}

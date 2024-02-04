@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1027562138382",
+    "project_id": "social-media-177dd",
+    "storage_bucket": "social-media-177dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027562138382:android:fefe0e06a05036ecdd455f",
+        "android_client_info": {
+          "package_name": "com.kpsoft.socialmedia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGG1rKDTXhVnW3yqfFP8PmNjej12tQ8-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
