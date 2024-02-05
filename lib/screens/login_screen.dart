@@ -30,8 +30,8 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Flexible(
-                child: Container(),
                 flex: 2,
+                child: Container(),
               ),
               SvgPicture.asset(
                 "assets/ic_instagram.svg",
@@ -60,7 +60,6 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               InkWell(
                 child: Container(
-                  child: const Text("Login"),
                   width: double.infinity,
                   alignment: Alignment.center,
                   padding: const EdgeInsets.symmetric(vertical: 12),
@@ -68,30 +67,31 @@ class _LoginScreenState extends State<LoginScreen> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(4))),
                       color: blueColor),
+                  child: const Text("Login"),
                 ),
               ),
               const SizedBox(
                 height: 12,
               ),
               Flexible(
-                child: Container(),
                 flex: 2,
+                child: Container(),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    child: const Text("Don't have an account?"),
                     padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: const Text("Don't have an account?"),
                   ),
                   GestureDetector(
                     onTap: () {},
                     child: Container(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
                       child: const Text(
                         "Sign up.",
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      padding: const EdgeInsets.symmetric(vertical: 8),
                     ),
                   )
                 ],
