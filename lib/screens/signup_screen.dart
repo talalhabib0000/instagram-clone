@@ -3,6 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:socialmedia/resources/auth_methods.dart';
+import 'package:socialmedia/responsive/mobile_screen_layout.dart';
+import 'package:socialmedia/responsive/responsive_layout_screen.dart';
+import 'package:socialmedia/responsive/web_screen_layout.dart';
+import 'package:socialmedia/screens/login_screen.dart';
 import 'package:socialmedia/utils/colors.dart';
 import 'package:socialmedia/utils/utils.dart';
 import 'package:socialmedia/widgets/text_field_input.dart';
@@ -51,7 +55,18 @@ class _SignupScreenState extends State<SignupScreen> {
     });
     if (res != "success") {
       showSnackBar(res, context);
+    } else {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (context) => const ResponsiveLayout(
+                mobileScreenLayout: MobileScreenLayout(),
+                webScreenLayout: WebScreenLayout(),
+              )));
     }
+  }
+
+  void navigateToLogin() {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => const LoginScreen()));
   }
 
   @override
@@ -141,7 +156,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           borderRadius: BorderRadius.all(Radius.circular(4))),
                       color: blueColor),
                   child: _isLoading
-                      ? Center(
+                      ? const Center(
                           child: CircularProgressIndicator(
                             color: primaryColor,
                           ),
@@ -164,11 +179,11 @@ class _SignupScreenState extends State<SignupScreen> {
                     child: const Text("Don't have an account?"),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: navigateToLogin,
                     child: Container(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: const Text(
-                        "Sign up.",
+                        "Login.",
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
